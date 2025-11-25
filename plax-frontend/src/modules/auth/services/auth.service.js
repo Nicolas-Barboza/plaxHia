@@ -1,7 +1,9 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 const authService = {
     login: async (body) => {
         try {
-            const response = await fetch('http://localhost:8080/api/auth/login', {
+            const response = await fetch('{API_URL}/auth/login', {
                 method: 'POST',
                 body: JSON.stringify(body),
                 headers: {
@@ -28,7 +30,7 @@ const authService = {
     },
     register: async (body) => {
         try {
-            const response = await fetch('http://localhost:8080/api/auth/register', {
+            const response = await fetch('{API_URL}/auth/register', {
                 method: 'POST',
                 body: JSON.stringify(body),
                 headers: {
