@@ -124,7 +124,7 @@ services:
     build: ./plax-backend/
     restart: always
     env_file:
-      - ./plax-backend/.env   # si algún día no lo usás, podés borrar estas 2 líneas
+      - ./plax-backend/.env
     ports:
       - "8080:8080"
     networks:
@@ -146,8 +146,8 @@ services:
     container_name: plax_frontend
     build: ./plax-frontend/
     restart: always
-    environment:
-      VITE_API_URL: http://3.139.60.200:8080
+    env_file:
+      - ./plax-frontend/.env
     ports:
       - "80:80"
     networks:

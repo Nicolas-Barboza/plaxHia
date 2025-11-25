@@ -8,12 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PlaxBackendApplication {
 
     public static void main(String[] args) {
-        Dotenv dotenv = Dotenv.configure().load();
-        System.setProperty("DATABASE_URL", dotenv.get("DATABASE_URL"));
-        System.setProperty("DATABASE_USER", dotenv.get("DATABASE_USER"));
-        System.setProperty("DATABASE_PASSWORD", dotenv.get("DATABASE_PASSWORD"));
-        System.setProperty("MAIL_USERNAME", dotenv.get("MAIL_USERNAME"));
-        System.setProperty("MAIL_PASSWORD", dotenv.get("MAIL_PASSWORD"));
         SpringApplication.run(PlaxBackendApplication.class, args);
     }
 
